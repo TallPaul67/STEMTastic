@@ -10,7 +10,9 @@ The arm motors are configured in rows 30 and 31.
 
 It includes the following funtions:
 * resetGyro().  We found we couldn't wait for the motion_sensor to get to a stable state, so made our own.  This allows for more prescise robot movement and turns.  
-* gyroStraight().  Use this to drive the robot straight.  Forwards or backwards.  It is designed for smooth acceleration up to a given max speed, then smoothly decelerates to stop at the given distance.  
+* gyroStraight().  Use this to drive the robot straight.  Forwards or backwards.  It is designed for smooth acceleration up to a given max speed, then smoothly decelerates to stop at the given distance.
+* gyroStraightTime().  Instead of distance, this function moves the robot by time.  Smoothly accelerating and decelerating.  We use this in areas we are worried the robot will get stuck.
 * gyroTurn().  Use this to turn a precise number of degrees to the left or right.  It is designed to smoothly accelerated for the first third of the turn reaching max turning speed, then decelerate smoothly for the last third of the turn.
+* gyroTurnTime().  Instead of turning by degrees, it turns by time.  We use this in turns we are worried the robot will get stuck.  
 * MoveArm().  Rotates left or right motor.  Up or down.  We move our arm by time, to lessen the chance that it will get stuck.  
 
