@@ -14,5 +14,8 @@ It includes the following funtions:
 * gyroStraightTime().  Instead of distance, this function moves the robot by time.  Smoothly accelerating and decelerating.  We use this in areas we are worried the robot will get stuck.
 * gyroTurn().  Use this to turn a precise number of degrees to the left or right.  It is designed to smoothly accelerated for the first third of the turn reaching max turning speed, then decelerate smoothly for the last third of the turn.
 * gyroTurnTime().  Instead of turning by degrees, it turns by time.  We use this in turns we are worried the robot will get stuck.  
-* MoveArm().  Rotates left or right motor.  Up or down.  We move our arm by time, to lessen the chance that it will get stuck.  
+* MoveArm().  Rotates left or right motor.  Up or down.  We move our arm by time, to lessen the chance that it will get stuck.
+* initializeRobot().  Always run this function first to initialize all the robot motors and variables.
+
+None of the line following functions are functional in this release.  
 
